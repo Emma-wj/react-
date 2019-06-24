@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
-import {Router,Switch} from "react-router-dom";
-import {Login} from './pages/login';
-import {Admin} from './pages/admin';
+import {Route,Switch} from "react-router-dom";
+import Login from './pages/login';
+import Admin from './pages/admin';
 /*
 应用根组件
  */
-class App extends Component {
+export default class App extends Component {
     render(){
         return<Switch>
-            <Router path='/login' Component={Login}/>;
-            <Router path='/' Component={Admin}/>
+            <Route path='/login' component={Login}/>;
+            <Route path='/' component={Admin}/>
         </Switch>
     }
 }
 
 
-export default App
+
